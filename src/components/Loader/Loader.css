@@ -1,0 +1,129 @@
+.animation-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+  }
+  
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+  }
+  
+  line, circle {
+    stroke: black;
+    stroke-linecap: round;
+    opacity: 0;
+  }
+  
+  .path {
+    animation: dash 4s ease-in-out infinite, appear 4s ease-in-out infinite;
+    stroke: blue;
+  }
+  
+  .line {
+    animation: line 4s ease-in-out infinite, appear 4s ease-in-out infinite;
+    stroke: black;
+  }
+  
+  .line-reversed {
+    animation: line-reversed 4s ease-in-out infinite, appear 4s ease-in-out infinite;
+    stroke: black;
+  }
+  
+  .loading-text {
+    position: absolute;
+    font-size: 1rem;
+    animation: appear 4s ease-in-out infinite;
+    opacity: 0;
+  }
+  
+  .left {
+    left: 0px;
+    top: 25px;
+  }
+  
+  .centre {
+    bottom: -10px;
+    left: 40px;
+    animation-delay: 1s;
+  }
+  
+  .right {
+    left: 80px;
+    top: 25px;
+    animation-delay: 2s;
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 0, 150;
+      stroke-dashoffset: 0;
+    }
+  
+    50% {
+      stroke-dasharray: 0, 1;
+      stroke-dashoffset: 0;
+    }
+  
+    100% {
+      stroke-dasharray: 0, 150;
+      stroke-dashoffset: -124;
+    }
+  }
+  
+  @keyframes line {
+    0% {
+      stroke-dasharray: 0, 150;
+      stroke-dashoffset: 0;
+    }
+  
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: 0;
+    }
+  
+    100% {
+      stroke-dasharray: 124, 150;
+      stroke-dashoffset: -150;
+    }
+  }
+  
+  @keyframes line-reversed {
+    0% {
+      stroke-dasharray: 124, 150;
+      stroke-dashoffset: 150;
+    }
+  
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: 0;
+    }
+  
+    100% {
+      stroke-dasharray: 0, 150;
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  
+  }
+  

@@ -1,0 +1,12 @@
+.box {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid black;
+    margin: 0.5rem;
+    outline: none;
+}
+
+.box:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
