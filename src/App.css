@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-white: #F0EEED;
+    --color-blue: #609EA2;
+    --color-red: #C92C6D;
+    --color-black: #332C39;
+}
+
+
+.container {
+    position: relative;
+    padding: 2rem;
+    margin: 2rem;
+    border: 1px solid var(--color-blue);
+    border-radius: 2rem;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    height: calc(100vh - 150px - 4rem);
+}
+
+@media only screen and (min-width: 765px) {
+
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+}

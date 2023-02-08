@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Box from "../Box/Box"
 import "./Board.css"
+import "animate.css"
 
 function Board() {
 
@@ -13,7 +14,7 @@ function Board() {
         status = 'Winner: ' + winner;
     } else {
         status = 'Next player: ' + (nextMove);
-    }
+    };
 
     function handleBoxClick(index: number) {
         if (boxes[index] || calculateWinner(boxes)) {
@@ -44,9 +45,9 @@ function Board() {
     };
 
     return (
-        <div>
+        <div className="board-wrapper animate__animated animate__fadeIn">
             <div className="status">
-                {status}
+                <div className="status-text">{status}</div>
                 <button type="button" onClick={resetBoard}>Restart</button>
             </div>
             <div className="board">

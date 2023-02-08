@@ -1,8 +1,8 @@
 import "./Loader.css"
 
 function Loader() {
-    return (
-        <div className='animation-wrapper'>
+  return (
+    <div className='animation-wrapper'>
       <svg className="spinner" viewBox="0 0 50 50">
         <circle className="path" cx="25" cy="25" r="20" fill="none" stroke-width="2.5"></circle>
 
@@ -17,7 +17,7 @@ function Loader() {
       <h1 className='loading-text centre'>tac</h1>
       <h1 className='loading-text right'>toe</h1>
     </div>
-    )
+  )
 };
 
 export default Loader
